@@ -1,0 +1,11 @@
+package Mas_alla_de_lo_basico
+
+fun main() {
+    val allBooks = setOf("Macbeth", "Romeo and Juliet", "Hamlet", "A Midsummer Night's Dream")
+    val library = mapOf("Shakespeare" to allBooks)
+    println(library.any { it.value.contains("Hamlet") })
+    val moreBooks = mutableMapOf<String, String>("Wilhelm Tell" to "Schiller")
+    moreBooks.getOrPut("Jungle Book") { "Kipling" }
+    moreBooks.getOrPut("Hamlet") { "Shakespeare" }
+    println(moreBooks)
+}
